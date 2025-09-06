@@ -1,97 +1,115 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { shaq, bwmap, worldmap } from '../assets';
+import { idris } from '../assets';
 
 const Hero = () => {
   return (
-    <>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={bwmap}
-          alt="world map"
-          className="w-full h-full sm:block hidden object-cover"
-        />
-      </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
-        <img
-          src={worldmap}
-          alt="world map"
-          className="w-full h-full sm:hidden block object-cover"
-        />
-      </div>
-      <section
-        className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
-        sm:bg-hero bg-hero-mobile overflow-hidden">
-        <div
-          className={`absolute inset-0 sm:top-[250px] top-[150px] 
-          lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
-          max-w-7xl mx-auto flex flex-row items-start
-          justify-between gap-3`}>
-          <div className="flex flex-col justify-center items-center mt-5 ml-3">
-            <div className="w-5 h-5 rounded-full bg-[#0a0a0a] sm:hidden" />
-            <div className="w-1 sm:h-80 h-40 bw-gradient sm:hidden" />
-          </div>
+    <section className="relative flex sm:flex-row flex-col w-full h-screen mx-auto overflow-hidden bg-gradient-to-r from-[#1E3A5F] via-[#3F5879] to-[#B22234]">
+      <motion.div
+        className={`absolute inset-0 sm:top-[200px] top-[150px] 
+        lg:top-[150px] xl:top-[200px] ${styles.paddingX} 
+        max-w-7xl mx-auto flex flex-row items-start
+        justify-between gap-8`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        {/* Left Section - Text */}
+        <div className="flex flex-col justify-center items-start text-white">
+          <motion.h1
+            className="text-4xl sm:text-6xl font-bold leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Blockchain & Fullstack Developer
+          </motion.h1>
 
-          <div>
-            <h1
-              className={`${styles.heroHeadText} text-eerieBlack font-poppins uppercase`}>
-              Hi, I'm{' '}
-              <span
-                className="sm:text-battleGray sm:text-[90px] 
-                text-eerieBlack text-[50px] font-mova
-                font-extrabold uppercase">
-                Shaquille
-              </span>
-            </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
-              consectetur adipisicing elit deleniti, voluptas.
-            </p>
-          </div>
-          <div
-            className="w-screen flex flex-col items-start 
-            justify-center sm:-ml-[3rem] xxs:mt-4"></div>
+          <motion.p
+            className="mt-4 text-lg text-gray-200 max-w-xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Delivering secure, scalable applications that integrate blockchain 
+            technology and fullstack engineering to drive innovation and growth.
+          </motion.p>
 
-          <div></div>
+          {/* Credibility bullets */}
+          <motion.ul
+            className="mt-6 space-y-2 text-gray-300 text-base"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <li>• 6+ years of fullstack development experience</li>
+            <li>• Smart contracts & decentralized applications (dApps)</li>
+            <li>• Expertise in React, Node.js, MongoDB, and Express</li>
+          </motion.ul>
+
+          {/* CTA Buttons */}
+          <motion.div
+            className="flex gap-4 mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <a
+              href="#projects"
+              className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
+            >
+              View Portfolio
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white hover:text-[#1E3A5F] transition"
+            >
+              Contact Me
+            </a>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div
+            className="flex gap-4 mt-6 text-gray-200"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1 }}
+          >
+            <a
+              href="https://github.com/obaka"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub size={24} className="hover:text-white transition" />
+            </a>
+            <a
+              href="https://linkedin.com/in/obaka"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={24} className="hover:text-white transition" />
+            </a>
+          </motion.div>
         </div>
 
-        <div
-          className="absolute xs:bottom-10 bottom-32 w-full 
-          flex justify-center items-center">
-          <a href="#about">
-            <div
-              className="w-[35px] h-[64px] rounded-3xl border-4 
-            border-french border-dim flex
-            justify-center items-start p-2">
-              <motion.div
-                animate={{
-                  y: [0, 24, 0],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                }}
-                className="w-3 h-3 rounded-full bg-taupe mb-1"
-              />
-            </div>
-          </a>
-        </div>
-
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
-        <div>
+        {/* Right Section - Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="hidden sm:block"
+        >
           <img
-            className="absolute bottom-0 ml-[50vw] 
-            lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
-            sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={shaq}
-            alt="shaquille"
+            className="sm:h-[80vh] max-h-[500px] object-contain rounded-2xl shadow-xl border-4 border-white"
+            src={idris}
+            alt="Portrait of Obaka"
           />
-        </div>
-      </section>
-    </>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 
