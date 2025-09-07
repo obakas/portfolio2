@@ -25,19 +25,16 @@ const App = () => {
         <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
           <Tech />
         </div>
+        <div className="bg-[#972f44] ">
+          <Projects />
 
-        <Projects />
+        </div>
 
-        <div
-          className="bg-experience bg-cover bg-center bg-no-repeat 
-            rounded-tl-[150px] rounded-br-[150px]">
           <div
-            className="bg-experienceLight bg-cover bg-center 
-            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
+            className="bg-[#d3cbc8] ">
             <Experience />
           </div>
-        </div>
-        <div className="relative z-0">
+        <div className="relative z-0 bg-gradient-to-r from-[#1E3A5F] via-[#3F5879] to-[#B22234]">
           <Contact />
         </div>
       </div>
