@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import {
   Decal,
@@ -19,7 +19,8 @@ const Ball = (props) => {
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 2]} />
         <meshStandardMaterial
-          color="#3d3d3d"
+          // color="#3d3d3d"
+          color="#9a2d42"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading

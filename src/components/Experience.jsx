@@ -13,17 +13,17 @@ import { textVariant } from '../utils/motion';
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: '#eaeaec',
-      color: '#292929',
-      boxShadow:
-        'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+      background: '#F0F4F8', // soft bluish-gray from your picture
+      color: '#1F2A44', // navy-charcoal for text
+      boxShadow: '0px 8px 20px rgba(31, 42, 68, 0.08)', // soft professional shadow
+      borderRadius: '12px',
     }}
     contentArrowStyle={{
-      borderRight: '7px solid  #232631',
+      borderRight: '7px solid #CBD5E1', // subtle light slate arrow
     }}
     date={
       <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">
+        <h3 className="text-[18px] font-bold font-beckman text-[#4B5563]">
           {experience.date}
         </h3>
       </div>
@@ -39,11 +39,11 @@ const ExperienceCard = ({ experience }) => (
       </div>
     }>
     <div>
-      <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
+      <h3 className="text-[22px] font-bold font-beckman tracking-[1px] text-[#1F2A44]">
         {experience.title}
       </h3>
       <p
-        className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
+        className="text-[18px] font-semibold font-overcameBold tracking-[0.5px] text-[#3A86FF]" // blue accent for company name
         style={{ margin: 0 }}>
         {experience.company_name}
       </p>
@@ -55,10 +55,10 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
+        <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem] text-[#4B5563]`}>
           What I've done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
+        <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem] text-[#1F2A44]`}>
           Work Experience.
         </h2>
       </motion.div>
@@ -68,20 +68,22 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
+
+          {/* Resume CTA */}
           <VerticalTimelineElement
             contentStyle={{
-              background: '#eaeaec',
-              color: '#292929',
-              boxShadow:
-                'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+              background: '#F0F4F8',
+              color: '#1F2A44',
+              boxShadow: '0px 8px 20px rgba(31, 42, 68, 0.08)',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
+              borderRadius: '12px',
             }}
             contentArrowStyle={{
-              borderRight: '7px solid  #232631',
+              borderRight: '7px solid #CBD5E1',
             }}
-            iconStyle={{ background: '#333333' }}
+            iconStyle={{ background: '#1F2A44' }}
             icon={
               <div className="flex justify-center items-center w-full h-full">
                 <img
@@ -92,17 +94,13 @@ const Experience = () => {
               </div>
             }>
             <button
-              className="live-demo flex justify-between 
-              sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
-              whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
-              w-[125px] h-[46px] rounded-[10px] bg-jetLight 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
+              className="flex justify-between items-center gap-2 px-4 py-3 
+              text-[14px] sm:text-[16px] font-bold font-beckman 
+              rounded-lg bg-[#3A86FF] text-white 
+              hover:bg-[#2563eb] transition duration-200"
               onClick={() =>
                 window.open(
-                  'resume link', //paste the link to your resume here
+                  'resume link', // replace with your actual resume link
                   '_blank'
                 )
               }
@@ -120,8 +118,7 @@ const Experience = () => {
               <img
                 src={download}
                 alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
+                className="download-btn w-[20px] h-[20px] object-contain"
               />
             </button>
           </VerticalTimelineElement>

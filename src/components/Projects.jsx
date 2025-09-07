@@ -23,39 +23,46 @@ const ProjectCard = ({
       className={`relative ${
         active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
       } flex items-center justify-center min-w-[170px] 
-      h-[420px] cursor-pointer card-shadow`}
-      onClick={() => handleClick(id)}>
-      <div
-        className="absolute top-0 left-0 z-10 bg-jetLight 
-      h-full w-full opacity-[0.5] rounded-[24px]"></div>
+      h-[420px] cursor-pointer transition-all duration-300`}
+      onClick={() => handleClick(id)}
+    >
+      {/* overlay tint */}
+      <div className="absolute top-0 left-0 z-10 bg-[#1F2A44]/50 h-full w-full rounded-[24px]"></div>
 
+      {/* project image */}
       <img
         src={image}
         alt={name}
         className="absolute w-full h-full object-cover rounded-[24px]"
       />
 
+      {/* collapsed title */}
       {active !== id ? (
         <div className="flex items-center justify-start pr-[4.5rem]">
           <h3
             className="font-extrabold font-beckman uppercase w-[200px] h-[30px] 
-        whitespace-nowrap sm:text-[27px] text-[18px] text-timberWolf tracking-[1px]
-        absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20">
+            whitespace-nowrap sm:text-[27px] text-[18px] text-[#F0F4F8] tracking-[1px]
+            absolute z-0 lg:bottom-[7rem] lg:rotate-[-90deg] lg:origin-[0,0]
+            leading-none z-20"
+          >
             {name}
           </h3>
         </div>
       ) : (
         <>
+          {/* expanded content */}
           <div
             className="absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(122,122,122,0.5)] rounded-b-[24px] z-20">
+            flex-col bg-[rgba(240,244,248,0.95)] rounded-b-[24px] z-20"
+          >
+            {/* repo button */}
             <div className="absolute inset-0 flex justify-end m-3">
               <div
                 onClick={() => window.open(repo, '_blank')}
-                className="bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full 
-                  flex justify-center items-center cursor-pointer
-                  sm:opacity-[0.9] opacity-[0.8]">
+                className="bg-[#1F2A44] sm:w-11 sm:h-11 w-10 h-10 rounded-full 
+                flex justify-center items-center cursor-pointer
+                sm:opacity-90 opacity-80 hover:bg-[#3A86FF] transition"
+              >
                 <img
                   src={github}
                   alt="source code"
@@ -64,26 +71,29 @@ const ProjectCard = ({
               </div>
             </div>
 
+            {/* project name */}
             <h2
-              className="font-bold sm:text-[32px] text-[24px] 
-              text-timberWolf uppercase font-beckman sm:mt-0 -mt-[1rem]">
+              className="font-bold sm:text-[28px] text-[22px] 
+              text-[#1F2A44] uppercase font-beckman sm:mt-0 -mt-[1rem]"
+            >
               {name}
             </h2>
+
+            {/* project description */}
             <p
-              className="text-silver sm:text-[14px] text-[12px] 
+              className="text-[#4B5563] sm:text-[14px] text-[12px] 
               max-w-3xl sm:leading-[24px] leading-[18px]
-              font-poppins tracking-[1px]">
+              font-poppins tracking-[0.5px]"
+            >
               {description}
             </p>
+
+            {/* demo button */}
             <button
-              className="live-demo flex justify-between 
-              sm:text-[16px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-2 pr-3 
-              whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px] 
-              w-[125px] h-[46px] rounded-[10px] glassmorphism 
-              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
-              hover:text-eerieBlack transition duration-[0.2s] 
-              ease-in-out"
+              className="flex justify-between items-center gap-2 px-4 py-3 
+              sm:text-[16px] text-[14px] font-bold font-beckman 
+              rounded-lg bg-[#3A86FF] text-white 
+              hover:bg-[#2563eb] transition duration-200 mt-4"
               onClick={() => window.open(demo, '_blank')}
               onMouseOver={() => {
                 document
@@ -94,12 +104,13 @@ const ProjectCard = ({
                 document
                   .querySelector('.btn-icon')
                   .setAttribute('src', pineapple);
-              }}>
+              }}
+            >
               <img
                 src={pineapple}
                 alt="pineapple"
-                className="btn-icon sm:w-[34px] sm:h-[34px] 
-                  w-[30px] h-[30px] object-contain"
+                className="btn-icon sm:w-[28px] sm:h-[28px] 
+                w-[24px] h-[24px] object-contain"
               />
               LIVE DEMO
             </button>
@@ -116,19 +127,23 @@ const Projects = () => {
   return (
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>Case Studies</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} text-[#4B5563]`}>
+          Case Studies
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-[#1F2A44]`}>
+          Projects.
+        </h2>
       </motion.div>
 
       <div className="w-full flex">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-          These projects demonstrate my expertise with practical examples of
-          some of my work, including brief descriptions and links to code
-          repositories and live demos. They showcase my ability to tackle
-          intricate challenges, adapt to various technologies, and efficiently
-          oversee projects.
+          className="mt-4 text-[#4B5563] text-[18px] max-w-3xl leading-[30px]"
+        >
+          These projects highlight my expertise with real-world examples, 
+          including descriptions, code repositories, and live demos. 
+          They showcase my ability to solve complex problems, adapt across 
+          technologies, and deliver polished, scalable solutions.
         </motion.p>
       </div>
 
@@ -137,7 +152,8 @@ const Projects = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`${styles.innerWidth} mx-auto flex flex-col`}>
+        className={`${styles.innerWidth} mx-auto flex flex-col`}
+      >
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
           {projects.map((project, index) => (
             <ProjectCard

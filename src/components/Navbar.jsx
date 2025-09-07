@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { close, menu, logo, logotext } from "../assets";
+import { close, menu } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -10,10 +9,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} fixed top-0 z-50 w-full bg-flashWhite/95 shadow-sm backdrop-blur-sm`}
+      className={`${styles.paddingX} fixed top-0 z-50 w-full bg-[#cfc7c4]/90 backdrop-blur-md shadow-md`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 sm:h-20">
-        {/* Logo */}
+        {/* Logo Section (optional re-enable later) */}
         {/* <Link
           to="/"
           className="flex items-center gap-2"
@@ -43,8 +42,8 @@ const Navbar = () => {
                 onClick={() => setActive(nav.title)}
                 className={`uppercase tracking-wide text-[15px] font-medium transition-colors ${
                   active === nav.title
-                    ? "text-taupe"
-                    : "text-eerieBlack hover:text-taupe"
+                    ? "text-taupe border-b-2 border-taupe pb-1"
+                    : "text-[#2b2725] hover:text-taupe"
                 }`}
               >
                 {nav.title}
@@ -69,7 +68,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`sm:hidden fixed top-0 right-0 h-screen w-3/4 bg-flashWhite shadow-lg transform transition-transform duration-300 ${
+        className={`sm:hidden fixed top-0 right-0 h-screen w-3/4 bg-gradient-to-br from-[#e9e4e1] to-[#cfc7c4] shadow-lg transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -90,10 +89,10 @@ const Navbar = () => {
                     setIsOpen(false);
                     setActive(nav.title);
                   }}
-                  className={`block text-lg font-semibold uppercase tracking-wide ${
+                  className={`block text-lg font-semibold uppercase tracking-wide transition-colors ${
                     active === nav.title
-                      ? "text-taupe"
-                      : "text-eerieBlack hover:text-taupe"
+                      ? "text-taupe border-l-4 border-taupe pl-2"
+                      : "text-[#2b2725] hover:text-taupe"
                   }`}
                 >
                   {nav.title}
