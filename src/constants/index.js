@@ -39,6 +39,9 @@ import {
   python,
   vercel,
   mysql,
+  crowdfund,
+  chainlegacy,
+  traceFund,
 } from '../assets';
 
 export const navLinks = [
@@ -213,8 +216,8 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'CrowdFund DApp',
+    description: 'A decentralized crowdfunding application built on the Ethereum blockchain.',
     tags: [
       {
         name: 'react',
@@ -229,15 +232,15 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    image: crowdfund,
+    repo: 'https://github.com/obakas/Fund-Idris',
+    demo: 'https://www.youtube.com/watch?v=cOxl-miweWI',
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'ChainLegacy DApp',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'A decentralized application that allows users to create and manage their own blockchain-based assets on the Ethereum blockchain.',
     tags: [
       {
         name: 'react',
@@ -252,14 +255,14 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    image: chainlegacy,
+    repo: 'https://github.com/obakas/ChainLegacy',
+    demo: 'https://www.youtube.com/watch?v=us9rYZU3q7k&feature=youtu.be',
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'FundTrace DApp',
+    description: 'This is a decentralized application that allows users to track and manage their funds on Solana blockchain.',
     tags: [
       {
         name: 'nextjs',
@@ -274,55 +277,55 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    image: traceFund,
+    repo: 'https://github.com/obakas/kamil-wallet-tracker-2',
+    demo: ' ',
   },
-  {
-    id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
-  },
-  {
-    id: 'project-5',
-    name: 'Nyeusi Fest Site',
-    description:
-      'This is a demo concert website for a music festival called Nyeusi.',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
-  },
+  // {
+  //   id: 'project-4',
+  //   name: 'Movie Metro',
+  //   description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+  //   tags: [
+  //     {
+  //       name: 'nextjs',
+  //       color: 'blue-text-gradient',
+  //     },
+  //     {
+  //       name: 'supabase',
+  //       color: 'green-text-gradient',
+  //     },
+  //     {
+  //       name: 'css',
+  //       color: 'pink-text-gradient',
+  //     },
+  //   ],
+  //   image: movie,
+  //   repo: 'https://github.com/shaqdeff/Movie-Metro',
+  //   demo: 'https://movie-metro.netlify.app/',
+  // },
+  // {
+  //   id: 'project-5',
+  //   name: 'Nyeusi Fest Site',
+  //   description:
+  //     'This is a demo concert website for a music festival called Nyeusi.',
+  //   tags: [
+  //     {
+  //       name: 'nextjs',
+  //       color: 'blue-text-gradient',
+  //     },
+  //     {
+  //       name: 'supabase',
+  //       color: 'green-text-gradient',
+  //     },
+  //     {
+  //       name: 'css',
+  //       color: 'pink-text-gradient',
+  //     },
+  //   ],
+  //   image: nyeusi,
+  //   repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
+  //   demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+  // },
 ];
 
 export { services, technologies, experiences, projects };

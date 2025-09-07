@@ -61,6 +61,9 @@ import math from './projects/math-magicians.png';
 import movie from './projects/movie-metro.png';
 import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
+import crowdfund from './projects/fundIdris.png';
+import chainlegacy from './projects/chainlegacy.png';
+import traceFund from './projects/traceFund.png';
 
 export {
   bwmap,
@@ -120,4 +123,7 @@ export {
   python,
   vercel,
   mysql,
+  crowdfund,
+  chainlegacy,
+  traceFund,
 };
