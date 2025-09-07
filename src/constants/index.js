@@ -27,6 +27,18 @@ import {
   dcc,
   kelhel,
   microverse,
+  smart,
+  contract,
+  fullstack,
+  solana,
+  solidity,
+  wagmi,
+  nextjs,
+  bootstrap,
+  cpp,
+  python,
+  vercel,
+  mysql,
 } from '../assets';
 
 export const navLinks = [
@@ -46,6 +58,14 @@ export const navLinks = [
 
 const services = [
   {
+    title: 'Smart Contract Development',
+    icon: smart,
+  },
+  // {
+  //   title: 'Fullstack Development',
+  //   icon: fullstack,
+  // },
+  {
     title: 'Frontend Developer',
     icon: frontend,
   },
@@ -53,14 +73,15 @@ const services = [
     title: 'Backend Developer',
     icon: backend,
   },
-  {
-    title: 'UI/UX Design',
-    icon: ux,
-  },
-  {
-    title: 'Software Prototyping',
-    icon: prototyping,
-  },
+  // {
+  //   title: 'UI/UX Design',
+  //   icon: ux,
+  // },
+  // {
+  //   title: 'Software Prototyping',
+  //   icon: prototyping,
+  // },
+  
 ];
 
 const technologies = [
@@ -84,10 +105,10 @@ const technologies = [
     name: 'React JS',
     icon: reactjs,
   },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
+  // {
+  //   name: 'Redux Toolkit',
+  //   icon: redux,
+  // },
   {
     name: 'Tailwind CSS',
     icon: tailwind,
@@ -96,29 +117,65 @@ const technologies = [
     name: 'Node JS',
     icon: nodejs,
   },
-  {
-    name: 'Rails',
-    icon: rubyrails,
-  },
-  {
-    name: 'graphql',
-    icon: graphql,
-  },
-  {
-    name: 'postgresql',
-    icon: postgresql,
-  },
+  // {
+  //   name: 'Rails',
+  //   icon: rubyrails,
+  // },
+  // {
+  //   name: 'graphql',
+  //   icon: graphql,
+  // },
+  // {
+  //   name: 'postgresql',
+  //   icon: postgresql,
+  // },
   {
     name: 'git',
     icon: git,
   },
-  {
-    name: 'figma',
-    icon: figma,
-  },
+  // {
+  //   name: 'figma',
+  //   icon: figma,
+  // },
   {
     name: 'docker',
     icon: docker,
+  },
+  {
+    name: 'nextjs',
+    icon: nextjs,
+  },
+  {
+    name: 'wagmi',
+    icon: wagmi,
+  },
+  {
+    name: 'solidity',
+    icon: solidity,
+  },
+  {
+    name: 'solana',
+    icon: solana,
+  },
+  // {
+  //   name: 'bootstrap',
+  //   icon: bootstrap,
+  // },
+  // {
+  //   name: 'c++',
+  //   icon: cpp,
+  // },
+  {
+    name: 'mysql',
+    icon: mysql,
+  },
+  {
+    name: 'python',
+    icon: python,
+  },
+  {
+    name: 'vercel',
+    icon: vercel,
   },
 ];
 

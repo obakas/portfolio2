@@ -60,6 +60,7 @@ const Projects = () => {
       <div className={`${styles.paddingX} -mt-48 bg-[#972f44] w-full px-6`}>
         {/* Header */}
         <motion.div variants={textVariant()}>
+          <p className={`${styles.sectionSubText} `}>Case Studies</p>
           <h2 className={`${styles.sectionHeadTextLight} text-night`}>
             Featured Projects
           </h2>

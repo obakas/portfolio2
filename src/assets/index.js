@@ -22,6 +22,9 @@ import menu from './icons/menu.png';
 import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
+import smart from './icons/smart2.png';
+import contract from './icons/contract.png';
+import fullstack from './icons/fullstack.png';
 
 import css from './tech/css.png';
 import docker from './tech/docker.png';
@@ -37,6 +40,15 @@ import typescript from './tech/typescript.png';
 import graphql from './tech/graphql.png';
 import postgresql from './tech/postgresql.png';
 import rubyrails from './tech/rubyrails.png';
+import solana from './tech/solana.png';
+import solidity from './tech/solidity.png';
+import wagmi from './tech/wagmi.png';
+import nextjs from './tech/nextjs.png';
+import bootstrap from './tech/bootstrap.png';
+import cpp from './tech/c++.png';
+import python from './tech/python.png';
+import vercel from './tech/vercel.png';
+import mysql from './tech/mysql.png';
 
 import coverhunt from './company/coverhunt.png';
 import dcc from './company/dcc.png';
@@ -96,4 +108,16 @@ export {
   dcc,
   kelhel,
   microverse,
+  smart,
+  contract,
+  fullstack,
+  solana,
+  solidity,
+  wagmi,
+  nextjs,
+  bootstrap,
+  cpp,
+  python,
+  vercel,
+  mysql,
 };
