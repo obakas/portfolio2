@@ -36,7 +36,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Delivering secure, scalable applications that integrate blockchain 
+            Delivering secure, scalable applications that integrate blockchain
             technology and fullstack engineering to drive innovation and growth.
           </motion.p>
 
@@ -59,18 +59,34 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <a
-              href="#projects"
+            <button
+              onClick={() => {
+                document.getElementById("projects")?.scrollIntoView({
+                  behavior: "smooth"
+                });
+                setActive("projects");
+              }}
               className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
             >
               View Portfolio
-            </a>
+            </button>
+
+            {/* <a
+              href="projects"
+              className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
+              onClick={() => {setActive("projects");window.scrollTo(0, 0);}}
+            >
+              View Portfolio
+            </a> */}
+
             <a
-              href="#contact"
+              href="contact"
               className="px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white hover:text-[#1E3A5F] transition"
+              onClick={() => setActive("Contact")}
             >
               Contact Me
             </a>
+
           </motion.div>
 
           {/* Social Links */}
@@ -80,6 +96,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1 }}
           >
+            {/* GitHub */}
             <a
               href="https://github.com/obakas"
               target="_blank"
@@ -88,6 +105,8 @@ const Hero = () => {
             >
               <FaGithub size={24} className="hover:text-white transition" />
             </a>
+
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/idris-obaka/"
               target="_blank"

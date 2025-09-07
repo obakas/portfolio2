@@ -57,28 +57,28 @@ const ProjectCard = ({ name, description, image, repo, demo, index }) => {
 
 const Projects = () => {
   return (
-    <div className={`${styles.paddingX} -mt-48 bg-[#972f44] w-full px-6` }>
-      {/* Header */}
-      <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadTextLight} text-night`}>
-          Featured Projects
-        </h2>
-      </motion.div>
+      <div className={`${styles.paddingX} -mt-48 bg-[#972f44] w-full px-6`}>
+        {/* Header */}
+        <motion.div variants={textVariant()}>
+          <h2 className={`${styles.sectionHeadTextLight} text-night`}>
+            Featured Projects
+          </h2>
+        </motion.div>
 
 
-      {/* Grid */}
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        {projects.map((project, index) => (
-          <ProjectCard key={project.id} index={index} {...project} />
-        ))}
-      </motion.div>
-    </div>
+        {/* Grid */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {projects.map((project, index) => (
+            <ProjectCard key={project.id} index={index} {...project} />
+          ))}
+        </motion.div>
+      </div>
   );
 };
 

@@ -60,21 +60,20 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className="-mt-[8rem] xl:flex-row flex-col-reverse 
+    <div className=" -mt-[8rem] xl:flex-row flex-col-reverse 
       flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] bg-jet p-8 rounded-2xl">
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
+        className="flex-[0.75] bg-[#cfc7c4] p-8 rounded-2xl">
+        <p className={`${styles.sectionSubText} text-black`}>Get in touch</p>
+        {/* <h3 className={styles.sectionHeadTextLight}>Contact.</h3> */}
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-10 flex flex-col gap-6 font-poppins">
+          className="mt-10 flex flex-col gap-6 font-poppins ">
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Name</span>
+            <span className="text-timberWolf font-medium mb-4 text-black">Your Name</span>
             <input
               type="text"
               name="name"
@@ -84,11 +83,11 @@ const Contact = () => {
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
-              border-none font-medium"
+              border-4 border-black font-medium bg-gradient-to-r from-[#d6d0cc] to-[#cfc7c4]"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Your Email</span>
+            <span className="text-timberWolf font-medium mb-4 text-black">Your Email</span>
             <input
               type="email"
               name="email"
@@ -98,11 +97,11 @@ const Contact = () => {
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
-              border-none font-medium"
+              font-medium bg-gradient-to-r from-[#d6d0cc] to-[#cfc7c4] border-4 border-black"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">
+            <span className="text-timberWolf font-medium mb-4 text-black">
               Your Message
             </span>
             <textarea
@@ -114,7 +113,7 @@ const Contact = () => {
               className="bg-eerieBlack py-4 px-6
               placeholder:text-taupe
               text-timberWolf rounded-lg outline-none
-              border-none font-medium resize-none"
+              font-medium resize-none bg-gradient-to-r from-[#d6d0cc] to-[#cfc7c4] border-4 border-black"
             />
           </label>
 

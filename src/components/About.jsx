@@ -6,12 +6,19 @@ import { services } from "../constants";
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", 0.15 * index, 0.8)}
-      className="w-full xs:w-[260px] p-[1px] rounded-2xl shadow-lg bg-gradient-to-r from-gray-200 to-gray-100"
-    >
-      <div className="bg-white rounded-2xl py-2 px-6 min-h-[260px] flex flex-col justify-center items-center hover:shadow-[0_0_20px_rgba(207,199,196,0.6)] transition duration-300">
-        <img src={icon} alt={title} className="w-14 h-14 object-contain mb-2" />
-        <h3 className="text-gray-800 text-lg font-semibold text-center">{title}</h3>
+      variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
+      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card">
+      <div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+        <h3 className="text-taupe text-[18px] font-bold text-center">
+          {title}
+        </h3>
       </div>
     </motion.div>
   );
