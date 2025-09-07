@@ -2,8 +2,12 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { styles } from '../styles';
 import { idris } from '../assets';
+import { useState } from "react";
+import { navLinks } from "../constants";
 
 const Hero = () => {
+  const [active, setActive] = useState("");
+
   return (
     <section className="relative flex sm:flex-row flex-col w-full h-screen mx-auto overflow-hidden bg-gradient-to-r from-[#1E3A5F] via-[#3F5879] to-[#B22234]">
       <motion.div
@@ -77,7 +81,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 1 }}
           >
             <a
-              href="https://github.com/obaka"
+              href="https://github.com/obakas"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -85,7 +89,7 @@ const Hero = () => {
               <FaGithub size={24} className="hover:text-white transition" />
             </a>
             <a
-              href="https://linkedin.com/in/obaka"
+              href="https://www.linkedin.com/in/idris-obaka/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
