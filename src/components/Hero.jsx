@@ -66,10 +66,22 @@ const Hero = () => {
                 });
                 setActive("projects");
               }}
-              className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
+              className="px-6 py-3 bg-yellow-500 text-white rounded-lg font-medium shadow hover:opacity-90 transition"
             >
               View Portfolio
             </button>
+            {/* <button
+              onClick={() => {
+                document.getElementById("projects")?.scrollIntoView({
+                  behavior: "smooth"
+                });
+                setActive("projects");
+              }}
+              className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
+            >
+              View Portfolio
+            </button> */}
+
 
             {/* <a
               href="projects"
