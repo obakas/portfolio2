@@ -59,18 +59,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
+            
             <button
-              onClick={() => {
-                document.getElementById("projects")?.scrollIntoView({
-                  behavior: "smooth"
-                });
-                setActive("projects");
-              }}
-              className="px-6 py-3 bg-yellow-500 text-white rounded-lg font-medium shadow hover:opacity-90 transition"
-            >
-              View Portfolio
-            </button>
-            {/* <button
               onClick={() => {
                 document.getElementById("projects")?.scrollIntoView({
                   behavior: "smooth"
@@ -80,7 +70,7 @@ const Hero = () => {
               className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
             >
               View Portfolio
-            </button> */}
+            </button>
 
 
             {/* <a
