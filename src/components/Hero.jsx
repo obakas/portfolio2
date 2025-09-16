@@ -3,7 +3,6 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { styles } from '../styles';
 import { idris } from '../assets';
 import { useState } from "react";
-import { navLinks } from "../constants";
 
 const Hero = () => {
   const [active, setActive] = useState("");
@@ -59,31 +58,18 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            
-            <button
-              onClick={() => {
-                document.getElementById("projects")?.scrollIntoView({
-                  behavior: "smooth"
-                });
-                setActive("projects");
-              }}
-              className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
-            >
-              View Portfolio
-            </button>
 
-
-            {/* <a
-              href="projects"
-              className="px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
+            <a
+              href="#projects"
+              className="z-10 px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
               onClick={() => {setActive("projects");window.scrollTo(0, 0);}}
             >
               View Portfolio
-            </a> */}
+            </a>
 
             <a
-              href="contact"
-              className="px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white hover:text-[#1E3A5F] transition"
+              href="#contact"
+              className="z-10 px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white hover:text-[#1E3A5F] transition"
               onClick={() => setActive("Contact")}
             >
               Contact Me
@@ -104,6 +90,7 @@ const Hero = () => {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
+              className='z-10'
             >
               <FaGithub size={24} className="hover:text-white transition" />
             </a>
@@ -114,6 +101,7 @@ const Hero = () => {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
+              className='z-10'
             >
               <FaLinkedin size={24} className="hover:text-white transition" />
             </a>
