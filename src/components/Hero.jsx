@@ -26,7 +26,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Blockchain & Fullstack Developer
+            Next.js & Web3 Engineer
+            {/* Blockchain & Fullstack Developer */}
           </motion.h1>
 
           <motion.p
@@ -35,8 +36,11 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Delivering secure, scalable applications that integrate blockchain
-            technology and fullstack engineering to drive innovation and growth.
+            I build secure, scalable applications powered by Next.js, React 19,
+            and blockchain technology—bringing modern web and decentralized
+            systems together.
+            {/* Delivering secure, scalable applications that integrate blockchain
+            technology and fullstack engineering to drive innovation and growth. */}
           </motion.p>
 
           {/* Credibility bullets */}
@@ -46,9 +50,9 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <li>• 6+ years of fullstack development experience</li>
+            <li>• 6+ years of full-stack development experience</li>
             <li>• Smart contracts & decentralized applications (dApps)</li>
-            <li>• Expertise in React, Node.js, MongoDB, and Express</li>
+            <li>• Expertise in Next.js, React, Tailwind, and Web3 tooling</li>
           </motion.ul>
 
           {/* CTA Buttons */}
@@ -61,19 +65,18 @@ const Hero = () => {
 
             <a
               href="#projects"
-              className="z-10 px-6 py-3 bg-[#B22234] text-white rounded-lg font-medium shadow hover:opacity-90 transition"
-              onClick={() => {setActive("projects");window.scrollTo(0, 0);}}
+              className="z-10 px-6 py-3 bg-[#B22234] text-white rounded-xl font-semibold shadow-lg hover:scale-105 hover:opacity-90 transition transform"
             >
-              View Portfolio
+              🚀 See My Work
             </a>
 
             <a
               href="#contact"
-              className="z-10 px-6 py-3 border border-white text-white rounded-lg font-medium hover:bg-white hover:text-[#1E3A5F] transition"
-              onClick={() => setActive("Contact")}
+              className="z-10 px-6 py-3 border border-white text-white rounded-xl font-semibold hover:bg-white hover:text-[#1E3A5F] hover:scale-105 transition transform"
             >
-              Contact Me
+              🤝 Let’s Build Together
             </a>
+
 
           </motion.div>
 
