@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type=" " href="./src/assets/logo/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Obaka | Portfolio</title>
-  </head>
-  <body class="bg-night">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type=" " href="./src/assets/logo/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obaka | Portfolio</title>
+</head>
+
+<body class="bg-night">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "6aR0c9lrmoc31RYsj",
+      });
+    })();
+  </script>
+
+</body>
+
 </html>

@@ -61,7 +61,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Smart Contract Development',
+    title: 'Solidity Smart Contract Developer',
     icon: smart,
   },
   // {
