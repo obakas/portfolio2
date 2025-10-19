@@ -200,11 +200,11 @@ const experiences = [
     date: 'Jan 26, 2025 - Mar 4, 2025',
   },
   {
-    title: 'Participant for Python Programming Study with Flask',
+    title: 'Participants for Python Programming Study with Flask',
     company_name: 'Upwork',
     icon: upwork,
     iconBg: '#333333',
-    date: 'Jul 2022 - Jul 2022',
+    date: 'Jul 22, 2024 - Jul 24, 2024',
   },
 ];
 

@@ -61,7 +61,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <li>• 6+ years of full-stack development experience</li>
+            <li>• 3+ years of full-stack development experience</li>
             <li className="text-xs sm:text-sm">• Smart contracts & decentralized applications (dApps)</li>
             <li className="text-xs sm:text-sm">• Expertise in Next.js, React, Tailwind, and Web3 tooling</li>
           </motion.ul>
