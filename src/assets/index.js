@@ -65,7 +65,7 @@ import crowdfund from './projects/fundIdris.png';
 import chainlegacy from './projects/chainlegacy.png';
 import traceFund from './projects/traceFund.png';
 import upwork from './company/upwork.png';
-import CodeGeeks9ja from './company/Codegeeks9ja.png';
+import CodeGeeks9ja from './company/CodeGeeks9ja.png';
 
 export {
   bwmap,
