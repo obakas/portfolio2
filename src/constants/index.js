@@ -42,6 +42,8 @@ import {
   crowdfund,
   chainlegacy,
   traceFund,
+  upwork,
+  CodeGeeks9ja,
 } from '../assets';
 
 export const navLinks = [
@@ -184,32 +186,25 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
-    icon: coverhunt,
+    title: 'Intern - Full Stack Developer',
+    company_name: 'CodeGeeks9ja',
+    icon: CodeGeeks9ja,
     iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    date: 'Jul 2024 - Present',
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
-    icon: microverse,
+    title: '175 Participants Github Copilot and Crowdbotics study',
+    company_name: 'Upwork enterprise client',
+    icon: upwork,
     iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    date: 'Jan 26, 2025 - Mar 4, 2025',
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
-    icon: kelhel,
+    title: 'Participant for Python Programming Study with Flask',
+    company_name: 'Upwork',
+    icon: upwork,
     iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
-  },
-  {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
-    icon: dcc,
-    iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    date: 'Jul 2022 - Jul 2022',
   },
 ];
 

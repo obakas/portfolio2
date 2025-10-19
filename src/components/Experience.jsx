@@ -74,7 +74,7 @@ const Experience = () => {
           ))}
 
           {/* Resume CTA */}
-          <VerticalTimelineElement
+          {/* <VerticalTimelineElement
             contentStyle={{
               background: "#F9FAFB",
               color: "#111827",
@@ -121,7 +121,7 @@ const Experience = () => {
                 className="download-btn w-[18px] h-[18px] object-contain"
               />
             </button>
-          </VerticalTimelineElement>
+          </VerticalTimelineElement> */}
         </VerticalTimeline>
       </div>
     </>

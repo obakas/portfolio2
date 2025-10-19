@@ -64,6 +64,8 @@ import space from './projects/space-hub.png';
 import crowdfund from './projects/fundIdris.png';
 import chainlegacy from './projects/chainlegacy.png';
 import traceFund from './projects/traceFund.png';
+import upwork from './company/upwork.png';
+import CodeGeeks9ja from './company/codegeeks9ja.png';
 
 export {
   bwmap,
@@ -126,4 +128,6 @@ export {
   crowdfund,
   chainlegacy,
   traceFund,
+  upwork,
+  CodeGeeks9ja,
 };
